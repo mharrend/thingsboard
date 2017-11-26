@@ -89,26 +89,7 @@ public class MqttSslHandlerProvider {
                 sslProtocol = "TLS";
             }
 
-            String ciphersToBeEnabled[] ={};
-	    ciphersToBeEnabled[0] = "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA";
-	    ciphersToBeEnabled[1] = "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA";                                        
-	    ciphersToBeEnabled[2] = "TLS_RSA_WITH_AES_256_CBC_SHA";                                            
-	    ciphersToBeEnabled[3] = "TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA";                                           
-	    ciphersToBeEnabled[4] = "TLS_ECDH_RSA_WITH_AES_256_CBC_SHA";                                             
-	    ciphersToBeEnabled[5] = "TLS_DHE_RSA_WITH_AES_256_CBC_SHA";                                              
-	    ciphersToBeEnabled[6] = "TLS_DHE_DSS_WITH_AES_256_CBC_SHA";                                              
-	    ciphersToBeEnabled[7] = "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA";                                          
-	    ciphersToBeEnabled[8] = "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA";                                            
-	    ciphersToBeEnabled[9] = "TLS_RSA_WITH_AES_128_CBC_SHA";                                                  
-	    ciphersToBeEnabled[10] = "TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA";                                           
-	    ciphersToBeEnabled[11] = "TLS_ECDH_RSA_WITH_AES_128_CBC_SHA";                                             
-	    ciphersToBeEnabled[12] = "TLS_DHE_RSA_WITH_AES_128_CBC_SHA";                                              
-	    ciphersToBeEnabled[13] = "TLS_DHE_DSS_WITH_AES_128_CBC_SHA";                                              
-	    ciphersToBeEnabled[14] = "TLS_ECDHE_ECDSA_WITH_3DES_EDE_CBC_SHA";                                         
-	    ciphersToBeEnabled[15] = "TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA";                                           
-	    ciphersToBeEnabled[16] = "SSL_RSA_WITH_3DES_EDE_CBC_SHA";                                                 
-	    ciphersToBeEnabled[17] = "TLS_ECDH_ECDSA_WITH_3DES_EDE_CBC_SHA";                                          
-	    ciphersToBeEnabled[18] = "TLS_ECDH_RSA_WITH_3DES_EDE_CBC_SHA"; 
+            String ciphersToBeEnabled[] ={"TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA", "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA", "TLS_RSA_WITH_AES_256_CBC_SHA", "TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA", "TLS_ECDH_RSA_WITH_AES_256_CBC_SHA", "TLS_DHE_RSA_WITH_AES_256_CBC_SHA", "TLS_DHE_DSS_WITH_AES_256_CBC_SHA", "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA", "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA", "TLS_RSA_WITH_AES_128_CBC_SHA", "TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA", "TLS_ECDH_RSA_WITH_AES_128_CBC_SHA", "TLS_DHE_RSA_WITH_AES_128_CBC_SHA", "TLS_DHE_DSS_WITH_AES_128_CBC_SHA", "TLS_ECDHE_ECDSA_WITH_3DES_EDE_CBC_SHA", "TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA", "SSL_RSA_WITH_3DES_EDE_CBC_SHA", "TLS_ECDH_ECDSA_WITH_3DES_EDE_CBC_SHA", "TLS_ECDH_RSA_WITH_3DES_EDE_CBC_SHA"};
 
             SSLContext sslContext = SSLContext.getInstance(sslProtocol);
             sslContext.init(km, tm, null);
